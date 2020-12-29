@@ -40,20 +40,6 @@
         //getData();
 
         */
-
-        
-
-   
-
-        var client_id;
-
-        document.getElementById("submit").addEventListener("click", function(){
-            console.log("It runs");
-
-            client_id = document.getElementById("text").value;
-
-            window.onXS2AReady = XS2A => {
-        // configure once for all flows (optional)
         window.XS2A.configure({
             autoClose: true,
             hideTransitionOnFlowEnd: true,
@@ -76,6 +62,19 @@
                 console.log('onClose called')
             },
         })
+        
+
+   
+
+        var client_id;
+
+        document.getElementById("submit").addEventListener("click", function(){
+            console.log("It runs");
+
+            client_id = document.getElementById("text").value;
+
+            window.onXS2AReady = XS2A => {
+        // configure once for all flows (optional)
 
         try {
                 // Start the flow with the client_token from the flow response.
