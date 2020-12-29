@@ -9,10 +9,11 @@
 
             let headers = new Headers();
 
-            headers.append('Content-Type', 'application/json');
-            headers.append('Accept', 'application/json');
-            headers.append('Authorization', 'Bearer ' + token);
-            headers.append('Origin', 'http://l127.0.0.1:5500')
+            //headers.append('Content-Type', 'application/json');
+            //headers.append('Accept', 'application/json');
+            //headers.append('Authorization', 'Bearer ' + token);
+            //headers.append('Access-Control-Allow-Origin', '*');
+            
 
             xhr.open('PUT', 'https://api.playground.openbanking.klarna.com/xs2a/v1/sessions');
             xhr.setRequestHeader('Authorization', 'Bearer ' + token);
