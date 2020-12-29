@@ -59,24 +59,7 @@
             },
         })
 
-        try {
-                // Start the flow with the client_token from the flow response.
-                window.XS2A.startFlow(
-                    'eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiRDc5TVRERzYiLCJmbG93X3R5cGUiOiJhY2NvdW50X2RldGFpbHMiLCJhdXRoX3VybCI6Imh0dHBzOi8vYXV0aGFwaS5wbGF5Z3JvdW5kLm9wZW5iYW5raW5nLmtsYXJuYS5jb20veHMyYS92MS93aXphcmQvb3YwcmpvdmhycHZyOWhxa29zazV2ODM4c29yaTNqbDAiLCJ4czJhX2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL2FwcC92MC9pbmRleC5odG1sI292MHJqb3ZocnB2cjlocWtvc2s1djgzOHNvcmkzamwwIiwid2lkZ2V0X2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL3dpZGdldC1hcHAve3ZlcnNpb259L2luZGV4Lmh0bWwjb3YwcmpvdmhycHZyOWhxa29zazV2ODM4c29yaTNqbDAiLCJ0cmFuc2xhdGlvbnNfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3RyYW5zbGF0aW9ucy9vdjByam92aHJwdnI5aHFrb3NrNXY4Mzhzb3JpM2psMCJ9.O_yhdECvFwbkykQhIlk5lKffT9hbED8OSSgkuFyjOUCOswzMfFCK4jJUwDmgx2em7XLB7FZu18Xij6nD0N4WDwpUAZ2yjlFWA1_i_IQPPQ_HJA1aYo3Y-hjbOMyrXu80l7LzbmtPqMIdDJqNjOZmFOT1x6NhYhHeOZUugIzZHdxVO7K_V5vM3S30uDKTlZI9fdcpk70aja6mg1ZHCvxHjXCl-iBR-1Wm20E_fcnpyo9sLEqlbhtLg6Fas1FNuxSbo2nC9D2egb369t0ClX8Lr2rwvJf5LPW0PlHm3IRwxHbPX-Cn21llQC9IvCopNM_9dqWcuppAIy6M4P4oHA7dvg',
-                    {
-                        onFinished: () => {
-                            // Read the flow from the server to retrieve the account list.
-                            console.log('onFinished: read the flow from the server to retrieve the account list.')
-                        },
-                        onError: error => {
-                            console.error('onError: something bad happened during the flow.', error)
-                        },
-                    }
-                )
-            } catch (e) {
-                // Handle error that happened while opening the App
-                console.error(e)
-            }
+        
  }
 </script>
     <script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>
@@ -87,8 +70,27 @@
         document.getElementById("text").innerHTML = "Changed";
     
             function init(val){
-        // Do whatever you want with your parameter val
-        document.getElementById("text").innerHTML = val
+                // Do whatever you want with your parameter val
+                document.getElementById("text").innerHTML = val
+
+                try {
+                        // Start the flow with the client_token from the flow response.
+                        window.XS2A.startFlow(
+                            'eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiRDc5TVRERzYiLCJmbG93X3R5cGUiOiJhY2NvdW50X2RldGFpbHMiLCJhdXRoX3VybCI6Imh0dHBzOi8vYXV0aGFwaS5wbGF5Z3JvdW5kLm9wZW5iYW5raW5nLmtsYXJuYS5jb20veHMyYS92MS93aXphcmQvb3YwcmpvdmhycHZyOWhxa29zazV2ODM4c29yaTNqbDAiLCJ4czJhX2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL2FwcC92MC9pbmRleC5odG1sI292MHJqb3ZocnB2cjlocWtvc2s1djgzOHNvcmkzamwwIiwid2lkZ2V0X2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL3dpZGdldC1hcHAve3ZlcnNpb259L2luZGV4Lmh0bWwjb3YwcmpvdmhycHZyOWhxa29zazV2ODM4c29yaTNqbDAiLCJ0cmFuc2xhdGlvbnNfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3RyYW5zbGF0aW9ucy9vdjByam92aHJwdnI5aHFrb3NrNXY4Mzhzb3JpM2psMCJ9.O_yhdECvFwbkykQhIlk5lKffT9hbED8OSSgkuFyjOUCOswzMfFCK4jJUwDmgx2em7XLB7FZu18Xij6nD0N4WDwpUAZ2yjlFWA1_i_IQPPQ_HJA1aYo3Y-hjbOMyrXu80l7LzbmtPqMIdDJqNjOZmFOT1x6NhYhHeOZUugIzZHdxVO7K_V5vM3S30uDKTlZI9fdcpk70aja6mg1ZHCvxHjXCl-iBR-1Wm20E_fcnpyo9sLEqlbhtLg6Fas1FNuxSbo2nC9D2egb369t0ClX8Lr2rwvJf5LPW0PlHm3IRwxHbPX-Cn21llQC9IvCopNM_9dqWcuppAIy6M4P4oHA7dvg',
+                            {
+                                onFinished: () => {
+                                    // Read the flow from the server to retrieve the account list.
+                                    console.log('onFinished: read the flow from the server to retrieve the account list.')
+                                },
+                                onError: error => {
+                                    console.error('onError: something bad happened during the flow.', error)
+                                },
+                            }
+                        )
+                    } catch (e) {
+                        // Handle error that happened while opening the App
+                        console.error(e)
+                    }
             }
         </script>
 </body>
