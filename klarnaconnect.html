@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-    <script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>
-</head>
-<body> 
-    <input id="text" placeholder="Enter ClientID"/>
-    <button id="submit" name="send">Send</button>;
-
     <script>
         /*
         function getData(){
@@ -39,7 +32,10 @@
 
         //getData();
 
-        */
+    */
+
+        window.onXS2AReady = XS2A => {
+        // configure once for all flows (optional)
         window.XS2A.configure({
             autoClose: true,
             hideTransitionOnFlowEnd: true,
@@ -62,24 +58,11 @@
                 console.log('onClose called')
             },
         })
-        
-
-   
-
-        var client_id;
-
-        document.getElementById("submit").addEventListener("click", function(){
-            console.log("It runs");
-
-            client_id = document.getElementById("text").value;
-
-            window.onXS2AReady = XS2A => {
-        // configure once for all flows (optional)
 
         try {
                 // Start the flow with the client_token from the flow response.
                 window.XS2A.startFlow(
-                    client_id,
+                    'eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiOEY5OThHVEoiLCJmbG93X3R5cGUiOiJ0cmFuc2FjdGlvbnMiLCJhdXRoX3VybCI6Imh0dHBzOi8vYXV0aGFwaS5wbGF5Z3JvdW5kLm9wZW5iYW5raW5nLmtsYXJuYS5jb20veHMyYS92MS93aXphcmQvbWZhcDJmYmxkbmVkb2lsZWVhZHVpbTNmZWJsMnI2anIiLCJ4czJhX2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL2FwcC92MC9pbmRleC5odG1sI21mYXAyZmJsZG5lZG9pbGVlYWR1aW0zZmVibDJyNmpyIiwid2lkZ2V0X2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL3dpZGdldC1hcHAve3ZlcnNpb259L2luZGV4Lmh0bWwjbWZhcDJmYmxkbmVkb2lsZWVhZHVpbTNmZWJsMnI2anIiLCJ0cmFuc2xhdGlvbnNfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3RyYW5zbGF0aW9ucy9tZmFwMmZibGRuZWRvaWxlZWFkdWltM2ZlYmwycjZqciJ9.Y6I5iOBfA0Es8Jnuc0Db-bmIueJ44sRbtXvyu2J3hlQU-IrIDeaN5zTHeJl41eLueqCpDRI7GEOWLu8Gjaxzj-5E1UZu_65OgBmGaFmMcmT6l0qwuq9kGCreOMar09qcCrk7bAGKfi3Scr_Ye7y-L77sKbriuZTYO5rSXwzaSysCfFx7KtfwQnkXq5Ro8U37F9K6vPHE9Bx2ynbB1Xs7y8iT1t6Ng5kWqa2fykP70o9viYBXGBEO1h_BCpdbZJi1d3_YyF3_lHi7x3hpR_lGiANVz0WFmqA62je_gSjvTUB1Ri-yt9ER1-zgVLK96aMlSYc4RC-0uXQR0ClopRyPtg',
                     {
                         onFinished: () => {
                             // Read the flow from the server to retrieve the account list.
@@ -94,12 +77,10 @@
                 // Handle error that happened while opening the App
                 console.error(e)
             }
-    }
-
-
-        })
-
-    
-    </script>
+ }
+</script>
+    <script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>
+</head>
+<body> 
 </body>
 </html>
