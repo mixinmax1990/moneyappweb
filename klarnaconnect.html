@@ -2,7 +2,7 @@
 <html>
 <head>
     <script>
-        
+        /*
         function getData(){
             var token = "MTYxMzY4Njc0OXx8fDkwODdmM2MwLWU2YzItNDRmNS1hZTEwLTdkNjYwODU1Y2E4MHx8fDIwNTR8fHxyaXZlcmJhbmsuKg==.acnm+WH42OrltnKstvQyk0e7nml+Je6bAA0YnywwAvo=";
             const xhr = new XMLHttpRequest();
@@ -30,13 +30,13 @@
             //navigator.userAgent
         }
 
-        getData();
+        //getData();*/
 
-        /*function startKlarnaOpenBankingXS2AApp(){
+        function startKlarnaOpenBankingXS2AApp(){
             try {
                 // Start the flow with the client_token from the flow response.
                 window.XS2A.startFlow(
-                    'MTYxMzY4Njc0OXx8fDkwODdmM2MwLWU2YzItNDRmNS1hZTEwLTdkNjYwODU1Y2E4MHx8fDIwNTR8fHxyaXZlcmJhbmsuKg==.acnm+WH42OrltnKstvQyk0e7nml+Je6bAA0YnywwAvo=',
+                    'eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiU1BLUzUzNEIiLCJmbG93X3R5cGUiOiJiYWxhbmNlcyIsImF1dGhfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3dpemFyZC9jNDFqdTY2OWs1bm5qbmdkYXRrazhpY2dncDM5bzZtMiIsInhzMmFfYXBwX3VybCI6Imh0dHBzOi8veC5rbGFybmFjZG4ubmV0L3hzMmEvYXBwL3YwL2luZGV4Lmh0bWwjYzQxanU2NjlrNW5uam5nZGF0a2s4aWNnZ3AzOW82bTIiLCJ3aWRnZXRfYXBwX3VybCI6Imh0dHBzOi8veC5rbGFybmFjZG4ubmV0L3hzMmEvd2lkZ2V0LWFwcC97dmVyc2lvbn0vaW5kZXguaHRtbCNjNDFqdTY2OWs1bm5qbmdkYXRrazhpY2dncDM5bzZtMiIsInRyYW5zbGF0aW9uc191cmwiOiJodHRwczovL2F1dGhhcGkucGxheWdyb3VuZC5vcGVuYmFua2luZy5rbGFybmEuY29tL3hzMmEvdjEvdHJhbnNsYXRpb25zL2M0MWp1NjY5azVubmpuZ2RhdGtrOGljZ2dwMzlvNm0yIn0.mA5KdrzCjsgQ0fO7pK2sRMX5lNr5-RDdhbpG7KVo7FctzlnwkQZHsB2keOYp2QmCcZ3ypYhuQbK-9r4pxX7Z_H8LWqoIuJIRL44hebuA6tZ0PzweKu849WU76X9simpe6IKN5jXoJTK2W2Gxs525sGBfPbQagF1kcqyxbBLZJRmCpEqLmNJb988nvSKQM1bY_b9vif-WnWxAH0omRzxiEXntcBQ7tggH9FwObkTV-2IXYOj8QBXRYsYnR8xEbsGq8aR8Kk5As4Y23fS4Gketupxh7pzAtGr438u7Cs2iG-y-Mq1wu0hyUWXtF7t6SD52MzkEqWGCZVuMOD3ddY_K6Q',
                     {
                         onFinished: () => {
                             // Read the flow from the server to retrieve the account list.
@@ -51,10 +51,10 @@
                 // Handle error that happened while opening the App
                 console.error(e)
             }
-        }*/
-        //window.onXS2AReady = startKlarnaOpenBankingXS2AApp
+        
+        window.onXS2AReady = startKlarnaOpenBankingXS2AApp
     </script>
-    <!--<script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>-->
+    <script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>
 </head>
 <body> 
 </body>

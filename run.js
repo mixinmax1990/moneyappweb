@@ -27,9 +27,9 @@
             //navigator.userAgent
         }
 
-        getData();
+      
 
-        /*function startKlarnaOpenBankingXS2AApp(){
+        function startKlarnaOpenBankingXS2AApp(){
             try {
                 // Start the flow with the client_token from the flow response.
                 window.XS2A.startFlow(
