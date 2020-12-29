@@ -83,14 +83,15 @@
 </head>
 <body> 
     <a id="text">Testing</a>
+    <script>
+        document.getElementById("text").innerHTML = "Changed";
+    
+            function init(val){
+        // Do whatever you want with your parameter val
+        document.getElementById("text").innerHTML = val
+            }
+        </script>
 </body>
 
-    <script>
-    document.getElementById("text").value = "Changed";
-
-        function init(val){
-    // Do whatever you want with your parameter val
-    document.getElementById("text").value = val
-        }
-    </script>
+    
 </html>
