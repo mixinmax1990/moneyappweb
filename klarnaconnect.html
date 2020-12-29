@@ -17,7 +17,7 @@
 
             xhr.open('PUT', 'https://api.playground.openbanking.klarna.com/xs2a/v1/sessions');
             xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-            //xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+            xhr.setRequestHeader('Access-Control-Allow-Origin', '18.159.89.0');
 
             var psu = {
                 "language": "en",
