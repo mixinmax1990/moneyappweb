@@ -39,9 +39,20 @@
 
         //getData();
 
-    
+        */
 
-        window.onXS2AReady = XS2A => {
+        
+
+   
+
+        var client_id;
+
+        document.getElementById("submit").addEventListener("click", function(){
+            console.log("It runs");
+
+            client_id = document.getElementById("text").value;
+
+            window.onXS2AReady = XS2A => {
         // configure once for all flows (optional)
         window.XS2A.configure({
             autoClose: true,
@@ -69,7 +80,7 @@
         try {
                 // Start the flow with the client_token from the flow response.
                 window.XS2A.startFlow(
-                    'eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiQkNIVjkyRjQiLCJmbG93X3R5cGUiOiJ0cmFuc2FjdGlvbnMiLCJhdXRoX3VybCI6Imh0dHBzOi8vYXV0aGFwaS5wbGF5Z3JvdW5kLm9wZW5iYW5raW5nLmtsYXJuYS5jb20veHMyYS92MS93aXphcmQvbWF2dnF1MTBwMWIzc3NiODcxMjhjMHBmbjg3dmpmaWoiLCJ4czJhX2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL2FwcC92MC9pbmRleC5odG1sI21hdnZxdTEwcDFiM3NzYjg3MTI4YzBwZm44N3ZqZmlqIiwid2lkZ2V0X2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL3dpZGdldC1hcHAve3ZlcnNpb259L2luZGV4Lmh0bWwjbWF2dnF1MTBwMWIzc3NiODcxMjhjMHBmbjg3dmpmaWoiLCJ0cmFuc2xhdGlvbnNfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3RyYW5zbGF0aW9ucy9tYXZ2cXUxMHAxYjNzc2I4NzEyOGMwcGZuODd2amZpaiJ9.XLtePCYOtMnFPAO595hmuvpPLXu8RDrvbdMZlAt6FU_c6DRyRD-AYcbmjTd7G2melwcWk8DB_zBoQaPiqitpOb_GF5bcO_nGfMQ38roX5cUTK9dZeazz7it4bY0VIpd-uMBTBQpiEr3g-QU9jfyg7N_qs8RiEl8TvHChnBRu084rAph-nBT30hhrPuR7vkSu1nyu1mhmgxEINr3IKnEdV15uymwwfaSAj8dJzx859DwVrK7nbRpLwNXUig-HjO7HboLJYG7-yphM360GjMhOls4XwKwXdO-jviCB3ebfjVWIueSgAec--AHt0QWxQLP6ECsDSIOD6KjaZLruCm_RMQ',
+                    client_id,
                     {
                         onFinished: () => {
                             // Read the flow from the server to retrieve the account list.
@@ -85,13 +96,8 @@
                 console.error(e)
             }
     }
-*/
-   
 
-        
 
-        document.getElementById("submit").addEventListener("click", function(){
-            console.log("It runs");
         })
 
     
