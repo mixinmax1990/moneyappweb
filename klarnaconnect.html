@@ -32,11 +32,37 @@
 
         //getData();*/
 
-        function startKlarnaOpenBankingXS2AApp(){
-            try {
+    
+
+        window.onXS2AReady = XS2A => {
+        // configure once for all flows (optional)
+        window.XS2A.configure({
+            autoClose: true,
+            hideTransitionOnFlowEnd: true,
+            onLoad: () => {
+                console.log('onLoad called')
+            },
+            onReady: () => {
+                console.log('onReady called')
+            },
+            onAbort: () => {
+                console.log('onAbort called')
+            },
+            onError: error => {
+                console.log('onError called', error)
+            },
+            onFinished: () => {
+                console.log('onFinished called')
+            },
+            onClose: () => {
+                console.log('onClose called')
+            },
+        })
+
+        try {
                 // Start the flow with the client_token from the flow response.
                 window.XS2A.startFlow(
-                    'eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiVEg3N1I0RzUiLCJmbG93X3R5cGUiOiJ0cmFuc2FjdGlvbnMiLCJhdXRoX3VybCI6Imh0dHBzOi8vYXV0aGFwaS5wbGF5Z3JvdW5kLm9wZW5iYW5raW5nLmtsYXJuYS5jb20veHMyYS92MS93aXphcmQvcDlxNDFwdHEwMWMzamhkMnJiMnZuOXJrcGExcjliOWQiLCJ4czJhX2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL2FwcC92MC9pbmRleC5odG1sI3A5cTQxcHRxMDFjM2poZDJyYjJ2bjlya3BhMXI5YjlkIiwid2lkZ2V0X2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL3dpZGdldC1hcHAve3ZlcnNpb259L2luZGV4Lmh0bWwjcDlxNDFwdHEwMWMzamhkMnJiMnZuOXJrcGExcjliOWQiLCJ0cmFuc2xhdGlvbnNfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3RyYW5zbGF0aW9ucy9wOXE0MXB0cTAxYzNqaGQycmIydm45cmtwYTFyOWI5ZCJ9.Ht3EY7iOLK_sXfrQSBonLV_T7ueLEoosSJmItu1T2CGZ3bMRrQKCzYDLBHtSzQ8_koWlJGjtbP9jsgJ579xoEYaiNXjEDfTyhsfDP_WF5FHT0NqWDo7lKL5YEflNx86_ut7K5cuk9I_O-FnZDJ0HEoMg1_v6nTgRNJ3kzHyTV0VYdt3MI3ZYuKiYdU_o8slLfwrT1_CbKyj6q74mItwI_vJpzITPfHsl1ZH2dqitZ044Bgo1KPCObf0UDgl5BK8a3IxuEAGB2JzGzUt2-Gj36aoYadnnhmvBz46BYwGSG1xbf0qHViQX9uslOuI5M1d112SPsG5r18N_cT3LffkWCg',
+                    'eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiQkNIVjkyRjQiLCJmbG93X3R5cGUiOiJ0cmFuc2FjdGlvbnMiLCJhdXRoX3VybCI6Imh0dHBzOi8vYXV0aGFwaS5wbGF5Z3JvdW5kLm9wZW5iYW5raW5nLmtsYXJuYS5jb20veHMyYS92MS93aXphcmQvbWF2dnF1MTBwMWIzc3NiODcxMjhjMHBmbjg3dmpmaWoiLCJ4czJhX2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL2FwcC92MC9pbmRleC5odG1sI21hdnZxdTEwcDFiM3NzYjg3MTI4YzBwZm44N3ZqZmlqIiwid2lkZ2V0X2FwcF91cmwiOiJodHRwczovL3gua2xhcm5hY2RuLm5ldC94czJhL3dpZGdldC1hcHAve3ZlcnNpb259L2luZGV4Lmh0bWwjbWF2dnF1MTBwMWIzc3NiODcxMjhjMHBmbjg3dmpmaWoiLCJ0cmFuc2xhdGlvbnNfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3RyYW5zbGF0aW9ucy9tYXZ2cXUxMHAxYjNzc2I4NzEyOGMwcGZuODd2amZpaiJ9.XLtePCYOtMnFPAO595hmuvpPLXu8RDrvbdMZlAt6FU_c6DRyRD-AYcbmjTd7G2melwcWk8DB_zBoQaPiqitpOb_GF5bcO_nGfMQ38roX5cUTK9dZeazz7it4bY0VIpd-uMBTBQpiEr3g-QU9jfyg7N_qs8RiEl8TvHChnBRu084rAph-nBT30hhrPuR7vkSu1nyu1mhmgxEINr3IKnEdV15uymwwfaSAj8dJzx859DwVrK7nbRpLwNXUig-HjO7HboLJYG7-yphM360GjMhOls4XwKwXdO-jviCB3ebfjVWIueSgAec--AHt0QWxQLP6ECsDSIOD6KjaZLruCm_RMQ',
                     {
                         onFinished: () => {
                             // Read the flow from the server to retrieve the account list.
@@ -51,8 +77,7 @@
                 // Handle error that happened while opening the App
                 console.error(e)
             }
-        }
-        window.onXS2AReady = startKlarnaOpenBankingXS2AApp
+    }
     </script>
     <script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>
 </head>
