@@ -81,7 +81,11 @@
 */
     function runcode(){
 
-        console.log("It runs");
+        
+
+        document.getElementById("text").addEventListener("click", function(){
+            console.log("It runs");
+        })
 
     }
     </script>
@@ -89,7 +93,7 @@
 </head>
 <body> 
 
-    <input type="text" id="text" placeholder="Enter ClientID"/>
+    <input id="text" placeholder="Enter ClientID"/>
     <button onclick="runcode"></button>;
 </body>
 </html>
