@@ -50,10 +50,12 @@
             onLoad: () => {
                 console.log('onLoad called')
                 klarnaLifecycleCallback(onLoad)
+                window.cpjs.sendToAndroid("I am being sent to Android.");
             },
             onReady: () => {
                 console.log('onReady called')
                 klarnaLifecycleCallback(onReady)
+                window.cpjs.sendToAndroid("I am being sent to Android.");
             },
             onAbort: () => {
                 console.log('onAbort called')
