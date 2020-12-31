@@ -2,45 +2,6 @@
 <html>
 <head>
     <script>
-        /*
-        function getData(){
-            var token = "MTYxMzY4Njc0OXx8fDkwODdmM2MwLWU2YzItNDRmNS1hZTEwLTdkNjYwODU1Y2E4MHx8fDIwNTR8fHxyaXZlcmJhbmsuKg==.acnm+WH42OrltnKstvQyk0e7nml+Je6bAA0YnywwAvo=";
-            const xhr = new XMLHttpRequest();
-
-            let headers = new Headers();
-
-            //headers.append('Content-Type', 'application/json');
-            //headers.append('Accept', 'application/json');
-            //headers.append('Authorization', 'Bearer ' + token);
-            //headers.append('Access-Control-Allow-Origin', '*');
-            
-
-            xhr.open('PUT', 'https://api.playground.openbanking.klarna.com/xs2a/v1/sessions');
-            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-            xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://18.159.89.0');
-
-            var psu = {
-                "language": "en",
-                "psu": {
-                    "user_agent": navigator.userAgent,
-                    "ip_address": "18.159.89.0"
-                }
-            }
-            xhr.send(psu); 
-            //navigator.userAgent
-        }
-
-        //getData();
-
-    */
-        function androidResponse() {
-            window.cpjs.sendToAndroid("I am being sent to Android.");
-        }
-
-        function klarnaLifecycleCallback(state){
-            //state = 
-            androidResponse()
-        }
 
         window.onXS2AReady = XS2A => {
         // configure once for all flows (optional)
@@ -66,22 +27,12 @@
                 console.log('KlarnaOnClose')
             },
         })
-
-        //var lifecyc;
-        
-
-        
-
-        
  }
 </script>
     <script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>
 </head>
 <body> 
-    <a id="text">Testing</a>
     <script>
-        
-    
             function startAuthenticationApp(val){
                 // Do whatever you want with your parameter val
                 try {
