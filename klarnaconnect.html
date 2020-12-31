@@ -33,6 +33,14 @@
         //getData();
 
     */
+        function androidResponse() {
+            window.cpjs.sendToAndroid("I am being sent to Android.");
+        }
+
+        function klarnaLifecycleCallback(state){
+            //state = 
+            androidResponse()
+        }
 
         window.onXS2AReady = XS2A => {
         // configure once for all flows (optional)
@@ -66,14 +74,9 @@
         })
 
         //var lifecyc;
-        function klarnaLifecycleCallback(state){
-            //state = 
-            androidResponse()
-        }
+        
 
-        function androidResponse() {
-            window.cpjs.sendToAndroid("I am being sent to Android.");
-        }
+        
 
         
  }
