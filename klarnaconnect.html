@@ -25,7 +25,6 @@
                     "user_agent": navigator.userAgent,
                     "ip_address": "18.159.89.0"
                 }
-
             }
             xhr.send(psu); 
             //navigator.userAgent
@@ -68,12 +67,10 @@
 <body> 
     <a id="text">Testing</a>
     <script>
-        document.getElementById("text").innerHTML = "Changed";
+        
     
-            function init(val){
+            function startAuthenticationApp(val){
                 // Do whatever you want with your parameter val
-                document.getElementById("text").innerHTML = val
-
                 try {
                         // Start the flow with the client_token from the flow response.
                         window.XS2A.startFlow(
@@ -95,7 +92,6 @@
             }
         </script>
 </body>
-
 <!--  ssh -i "awsEC2_frankfurt.pem" ec2-user@ec2-18-159-89-0.eu-central-1.compute.amazonaws.com --> 
-
+    
 </html>
