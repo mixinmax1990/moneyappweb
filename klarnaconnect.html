@@ -48,30 +48,22 @@
             autoClose: true,
             hideTransitionOnFlowEnd: true,
             onLoad: () => {
-                console.log('onLoad called')
-                klarnaLifecycleCallback(onLoad)
-                window.cpjs.sendToAndroid("I am being sent to Android.");
+                console.log('KlarnaOnLoad')
             },
             onReady: () => {
-                console.log('onReady called')
-                klarnaLifecycleCallback(onReady)
-                window.cpjs.sendToAndroid("I am being sent to Android.");
+                console.log('KlarnaOnReady')
             },
             onAbort: () => {
-                console.log('onAbort called')
-                klarnaLifecycleCallback(onAbort)
+                console.log('KlarnaOnAbort') 
             },
             onError: error => {
-                console.log('onError called', error)
-                klarnaLifecycleCallback(onError)
+                console.log('KlarnaOnError', error)
             },
             onFinished: () => {
-                console.log('onFinished called')
-                klarnaLifecycleCallback(onFinished)
+                console.log('KlarnaOnFinished')
             },
             onClose: () => {
-                console.log('onClose called')
-                klarnaLifecycleCallback(onClose)
+                console.log('KlarnaOnClose')
             },
         })
 
