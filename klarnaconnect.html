@@ -41,23 +41,33 @@
             hideTransitionOnFlowEnd: true,
             onLoad: () => {
                 console.log('onLoad called')
+                klarnaLifecycleCallback(onLoad)
             },
             onReady: () => {
                 console.log('onReady called')
+                klarnaLifecycleCallback(onReady)
             },
             onAbort: () => {
                 console.log('onAbort called')
+                klarnaLifecycleCallback(onAbort)
             },
             onError: error => {
                 console.log('onError called', error)
+                klarnaLifecycleCallback(onError)
             },
             onFinished: () => {
                 console.log('onFinished called')
+                klarnaLifecycleCallback(onFinished)
             },
             onClose: () => {
                 console.log('onClose called')
+                klarnaLifecycleCallback(onClose)
             },
         })
+
+        function klarnaLifecycleCallback(state){
+            return state;
+        }
 
         
  }
@@ -92,6 +102,7 @@
             }
         </script>
 </body>
-<!--  ssh -i "awsEC2_frankfurt.pem" ec2-user@ec2-18-159-89-0.eu-central-1.compute.amazonaws.com --> 
-    
+
+<!--  ssh -i "awsEC2_frankfurt.pem" ec2-user@ec2-18-159-89-0.eu-central-1.compute.amazonaws.com -->     
+
 </html>
