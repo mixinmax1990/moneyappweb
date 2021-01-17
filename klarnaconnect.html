@@ -32,14 +32,13 @@
     <script src="https://x.klarnacdn.net/xs2a/app-launcher/v0/xs2a-app-launcher.js"></script>
 </head>
 <body> 
-    <a href=""></a>
     <script>
             function startAuthenticationApp(val){
-                // Do whatever you want with your parameter val
+                // Do wwhatever you want with your parameter val
                 try {
                         // Start the flow with the client_token from the flow response. 
                         window.XS2A.startFlow(
-                            "eyJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uX2lkX3Nob3J0IjoiTDlWSzc4S0siLCJmbG93X3R5cGUiOiJiYWxhbmNlcyIsImF1dGhfdXJsIjoiaHR0cHM6Ly9hdXRoYXBpLnBsYXlncm91bmQub3BlbmJhbmtpbmcua2xhcm5hLmNvbS94czJhL3YxL3dpemFyZC9uc2swMzk1cGttOXNjZGlhNDgxOWEydDlwMWN1bmp0MCIsInhzMmFfYXBwX3VybCI6Imh0dHBzOi8veC5rbGFybmFjZG4ubmV0L3hzMmEvYXBwL3YwL2luZGV4Lmh0bWwjbnNrMDM5NXBrbTlzY2RpYTQ4MTlhMnQ5cDFjdW5qdDAiLCJ3aWRnZXRfYXBwX3VybCI6Imh0dHBzOi8veC5rbGFybmFjZG4ubmV0L3hzMmEvd2lkZ2V0LWFwcC97dmVyc2lvbn0vaW5kZXguaHRtbCNuc2swMzk1cGttOXNjZGlhNDgxOWEydDlwMWN1bmp0MCIsInRyYW5zbGF0aW9uc191cmwiOiJodHRwczovL2F1dGhhcGkucGxheWdyb3VuZC5vcGVuYmFua2luZy5rbGFybmEuY29tL3hzMmEvdjEvdHJhbnNsYXRpb25zL25zazAzOTVwa205c2NkaWE0ODE5YTJ0OXAxY3VuanQwIn0.Do1a4SAa2-QW-mbjMxnWDfsujgz_fhs3MahzEmvC1aroP805KqtfhURxfwGUVuNbWZdjlO7fQD8UQkX1NFkT2aKe8WW0T5CnliX_bXSqewsRZAL3Tae8qPGTw0kVdQ388zEcd3PNANsrmSweRgQsPCLI7Xv2ti2pae5JJYknYxvL_1z4cBnE6HIGxNN2EgOtC5JAcKpAu6XRyr_tDxP3Fts8-Z78PGX65PhLCrIApkGbFJcWZgZBMZbdx83FCCBAocZnbvPCb37KKnQhJV0hagGvb7ehbmzJ-b2J6mIbVhmQ6HcY48GsgjXW0xXb1w-jMbvW0h2bFgPMS1u1YDS9-w",
+                            val,
                             {
                                 onFinished: () => {
                                     // Read the flow from the server to retrieve the account list.
